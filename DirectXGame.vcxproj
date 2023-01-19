@@ -147,6 +147,7 @@
     <ClInclude Include="DirectXCommon.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="ios_base.h" />
     <ClInclude Include="Object3d.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="WinApp.h" />
