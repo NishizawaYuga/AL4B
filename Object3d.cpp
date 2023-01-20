@@ -417,7 +417,7 @@ void Object3d::CreateModel()
 	std::ifstream file;
 	//.objファイルを開く
 	//file.open("Resources/triangle_mat/triangle_mat.obj");
-	const std::string modelname = "triangle_mat";
+	const std::string modelname = "virus";
 	const std::string filename = modelname + ".obj";	//"triangle_mat.obj"
 	const std::string directoryPath = "Resources/" + modelname + "/";	//"Resource/triangle_mat/";
 	file.open(directoryPath + filename);	//"Resources/triangle_mat/triangle_mat.obj"
@@ -789,8 +789,7 @@ void Object3d::Draw()
 	cmdList->SetGraphicsRootConstantBufferView(0, constBuffB0->GetGPUVirtualAddress());
 	cmdList->SetGraphicsRootConstantBufferView(1, constBuffB1->GetGPUVirtualAddress());
 	// シェーダリソースビューをセット
-	//おそらくコイツが原因
-	cmdList->SetGraphicsRootDescriptorTable(2, gpuDescHandleSRV);
+	//cmdList->SetGraphicsRootDescriptorTable(2, gpuDescHandleSRV);
 	// 描画コマンド
 	cmdList->DrawIndexedInstanced((UINT)indices.size(), 1, 0, 0, 0);
 }
