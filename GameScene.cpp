@@ -34,7 +34,11 @@ void GameScene::Initialize(DirectXCommon* dxCommon, Input* input)
 	spriteBG = Sprite::Create(1, { 0.0f,0.0f });
 	// 3Dオブジェクト生成
 	object3d = Object3d::Create();
+	object3d->SetPosition(XMFLOAT3(0.0f, 0.0f, 30.0f));
 	object3d->Update();
+	object3d_2 = Object3d::Create();
+	object3d_2->SetPosition(XMFLOAT3(30.0f, 0.0f, 30.0f));
+	object3d_2->Update();
 }
 
 void GameScene::Update()
@@ -65,6 +69,7 @@ void GameScene::Update()
 	}
 
 	object3d->Update();
+	object3d_2->Update();
 }
 
 void GameScene::Draw()
@@ -94,6 +99,7 @@ void GameScene::Draw()
 
 	// 3Dオブクジェクトの描画
 	object3d->Draw();
+	object3d_2->Draw();
 
 	/// <summary>
 	/// ここに3Dオブジェクトの描画処理を追加できる
